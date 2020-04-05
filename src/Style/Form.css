@@ -1,0 +1,38 @@
+.form-container {
+    align-self: flex-end;
+    margin-right: 20px;
+}
+
+::placeholder {
+    color: white;
+}
+
+input {
+    border: none;
+    border-bottom: 3px solid white;
+    background-color: #008bf800;
+    padding: 5px;
+    border-radius: 2px;
+    margin-right: 20px;
+    font-size: 15px;
+    color: white;
+}
+
+input:focus {
+    background-color: #ffffff70;
+    outline: 0;
+}
+
+.submit-button {
+    border-color: white;
+    border-style: solid;
+    background-color: #59b3fa;
+    font-weight: bold;
+    color: white;
+    padding: 6px 7px;
+    border-radius: 8px;
+}
+
+.submit-button:focus {
+    outline: 0;
+}
