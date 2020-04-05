@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import "../Style/Widget.css"
 
-const Widget = ({city, country, weather, details, wind, icon}) => {
+const Widget = ({city, country, weather, details, rain, wind, icon}) => {
     const [fahrenheit, setFahreneit] = useState("");
     const [convert, setConvert] = useState(false);
     
@@ -55,6 +55,7 @@ const Widget = ({city, country, weather, details, wind, icon}) => {
                 <span> {Math.round(details.temp_max) + " ºC"}</span>  
                 }
             </li>
+            <li><b>Rain: </b>{rain}mm</li>
             <li><b>Wind: </b>{wind.speed}m/s</li>
             <li><b>Humidity: </b>{details.humidity}%</li>
             <li><b>Pressure: </b>{details.pressure} hPa</li>
