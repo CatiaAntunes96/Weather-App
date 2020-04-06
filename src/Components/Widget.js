@@ -19,7 +19,7 @@ const Widget = ({city, country, weather, details, rain, wind, icon}) => {
     }
 
     function NoRain (attribute) {
-        return !attribute ? "" : `${attribute} mm`;
+        return !attribute ? <span></span> : <li><b>Rain: </b>{`${attribute} mm`}</li>;
     }
     
     return(
@@ -59,7 +59,7 @@ const Widget = ({city, country, weather, details, rain, wind, icon}) => {
                 <span> {Math.round(details.temp_max) + " ºC"}</span>  
                 }
             </li>
-            <li><b>Rain: </b>{NoRain(rain)}</li>
+            {NoRain(rain)}
             <li><b>Wind: </b>{wind.speed}m/s</li>
             <li><b>Humidity: </b>{details.humidity}%</li>
             <li><b>Pressure: </b>{details.pressure} hPa</li>
