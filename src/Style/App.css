@@ -1,5 +1,38 @@
 .App {
-  height: 78.7vh;
+  height: 72vh;
   background-color: #008bf8a6;
   padding: 200px 550px 0 550px;
+}
+
+@media screen and (max-width: 299px) {
+  .App {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 300px) and (max-width: 350px){
+  .App {
+    padding: 50px 10%;
+    height: 86vh;
+  }
+}
+
+@media screen and (min-width: 350px) and (max-width: 500px) {
+  .App {
+    padding: 50px 10%;
+    height: 87vh;
+  }
+}
+
+@media screen and (min-width: 500px) and (max-width: 800px) {
+  .App {
+    padding: 108px 10%;
+  }
+}
+
+@media screen and (min-width: 800px) and (max-width: 1300px) {
+  .App {
+    padding: 200px;
+    height: 45vh;
+  }
 }

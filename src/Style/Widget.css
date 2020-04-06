@@ -73,3 +73,46 @@ ul>li {
 .converte-button:focus {
     outline: 0;
 }
+
+
+@media screen and (min-width: 300px) and (max-width: 350px){
+    .widget-header {
+        padding: 0 15px;
+    }
+    .city {
+        font-size: 16px;
+    }
+    .weather-description {
+        font-size: 11px;
+    }
+    .weather-props {
+        padding: 0 15px;
+    }
+    .temperature {
+        font-size: 28px;
+    }
+    .converte-button {
+        font-size: 11px;
+    }
+}
+
+@media screen and (min-width: 300px) and (max-width: 500px) {
+    img {
+        width: 80px;
+    }
+    .city {
+        font-size: 18px;
+    }
+    .weather-description {
+        font-size: 12px;
+    }
+    .temperature {
+        font-size: 30px;
+    }
+    .converte-button {
+        font-size: 12px;
+    }
+    .weather-details {
+        font-size: 12px;
+    }
+}

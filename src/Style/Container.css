@@ -35,3 +35,19 @@
 .gps-icon {
     padding: 6px;
 }
+
+@media screen and (min-width: 300px) and (max-width: 500px){
+    .weather-container {
+        align-items: center;
+    }
+    .set-location-container {
+        margin-bottom: 25%;
+    }
+    .gps-icon {
+        padding: 2px;
+    }
+    .widget-container {
+        width: 100%;
+    }
+}
+

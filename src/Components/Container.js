@@ -32,7 +32,7 @@ const Container = () => {
         })
     }
     
-    const getWeatherGPS = async () => {  
+    async function getWeatherGPS() {  
         try {
             const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${coordinates.lat}&lon=${coordinates.lon}&units=metric&appid=${key}`)
             const gps = await response.json();
@@ -41,11 +41,11 @@ const Container = () => {
                 country: gps.sys,
                 weather: gps.weather?.map(el => el.description),
                 main: gps.main,
-                rain: gps.rain,
+                rain: gps.hasOwnProperty("rain") ? gps.rain["1h"] : "",
                 wind: gps.wind,
                 icon: gps.weather[0]
             });
-            setDisplay(true)
+            setDisplay(true);
         } catch {
             return;
         }
@@ -61,7 +61,7 @@ const Container = () => {
         }
     }
       
-    const getWeather = async () => {
+    async function getWeather() {
         if(!search) 
         return;
         
@@ -72,7 +72,7 @@ const Container = () => {
             country: data.sys,
             weather: data.weather.map(el => el.description),
             main: data.main,
-            rain: data.rain,
+            rain: data.hasOwnProperty("rain") ? data.rain["1h"] : "",
             wind: data.wind,
             icon: data.weather[0]
         })
@@ -123,8 +123,8 @@ const Container = () => {
             />
             :
             <div className="empty-div"></div>} 
-            </div>
-            )
-        }
+        </div>
+        )
+    }
         
         export default Container;

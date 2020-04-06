@@ -17,6 +17,10 @@ const Widget = ({city, country, weather, details, rain, wind, icon}) => {
     function conversionCelsius () {
         setConvert(false)
     }
+
+    function NoRain (attribute) {
+        return !attribute ? "" : `${attribute} mm`;
+    }
     
     return(
         <div className="widget-container">
@@ -55,7 +59,7 @@ const Widget = ({city, country, weather, details, rain, wind, icon}) => {
                 <span> {Math.round(details.temp_max) + " ºC"}</span>  
                 }
             </li>
-            <li><b>Rain: </b>{rain}mm</li>
+            <li><b>Rain: </b>{NoRain(rain)}</li>
             <li><b>Wind: </b>{wind.speed}m/s</li>
             <li><b>Humidity: </b>{details.humidity}%</li>
             <li><b>Pressure: </b>{details.pressure} hPa</li>

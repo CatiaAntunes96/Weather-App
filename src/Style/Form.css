@@ -36,3 +36,28 @@ input:focus {
 .submit-button:focus {
     outline: 0;
 }
+
+@media screen and (min-width: 300px) and (max-width: 500px) {
+    .form-container {
+        margin-right: 10px;
+    }
+    form {
+        display: flex;
+    }
+    input {
+        font-size: 13px;
+        padding: 5px;
+        margin-right: 11px;
+        width: 125px;
+    }
+    .submit-button {
+        font-size: 10px;
+        padding: 4px 5px;
+    }
+}
+
+@media screen and (min-width: 500px) and (max-width: 800px) {
+    form {
+        display: flex;
+    }
+}
