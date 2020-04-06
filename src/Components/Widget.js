@@ -18,6 +18,11 @@ const Widget = ({city, country, weather, details, rain, wind, icon}) => {
         setConvert(false)
     }
 
+    function convertWind (num) {
+        let conversion = num * 3.60;
+        return conversion.toFixed(1) + " km/h" 
+    }
+
     function NoRain (attribute) {
         return !attribute ? <span></span> : <li><b>Rain: </b>{`${attribute} mm`}</li>;
     }
@@ -60,7 +65,7 @@ const Widget = ({city, country, weather, details, rain, wind, icon}) => {
                 }
             </li>
             {NoRain(rain)}
-            <li><b>Wind: </b>{wind.speed}m/s</li>
+            <li><b>Wind: </b>{convertWind(wind.speed)}</li>
             <li><b>Humidity: </b>{details.humidity}%</li>
             <li><b>Pressure: </b>{details.pressure} hPa</li>
             </ul>
